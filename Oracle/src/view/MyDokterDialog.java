@@ -66,6 +66,13 @@ public class MyDokterDialog extends JDialog {
         simpanButton = new JButton("Simpan Ke Database");
         tombolPanel.add(simpanButton);
         add(tombolPanel,BorderLayout.NORTH);
+        
+        simpanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               rs.simpanDataDokter();
+            }
+        });
         // set visible
         setVisible(true);
     }
@@ -81,7 +88,7 @@ public class MyDokterDialog extends JDialog {
      */
     public void refreshTabelDokter(){
         // update table model
-        table = new JTable(new DokterTableModel(rs.getDaftarDokter()));
+        table.setModel(new DokterTableModel(rs.getDaftarDokter()));
     }
 
 }

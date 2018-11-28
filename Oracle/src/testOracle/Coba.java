@@ -6,6 +6,8 @@
 package testOracle;
 
 import java.awt.BorderLayout;
+import model_RS.Dokter;
+import model_RS.RumahSakit;
 import view.TambahDokterDialog;
 
 /**
@@ -14,10 +16,10 @@ import view.TambahDokterDialog;
  */
 public class Coba {
     public static void main(String[] args) {
-        TambahDokterDialog tambahDokter = new TambahDokterDialog();
-        tambahDokter.setVisible(true);
-        tambahDokter.setSize(700, 500);
-        // set Layout
-        tambahDokter.setLayout(new BorderLayout());
+    Dokter dr1 = new Dokter("001", "Puspaningtyas");
+    Dokter dr2 = new Dokter("004", "Budi");
+    RumahSakit rs = new RumahSakit("Panti Rapih", "Yogyakarta");
+        System.out.println(rs.isDokterExist(dr1));
+        System.out.println(rs.isDokterExist(dr2));
     }
 }
