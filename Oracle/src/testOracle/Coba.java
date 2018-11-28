@@ -21,5 +21,7 @@ public class Coba {
     RumahSakit rs = new RumahSakit("Panti Rapih", "Yogyakarta");
         System.out.println(rs.isDokterExist(dr1));
         System.out.println(rs.isDokterExist(dr2));
+        
+        rs.hapusDataDokter(dr2);
     }
 }
